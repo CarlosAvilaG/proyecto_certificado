@@ -1,0 +1,11 @@
+service: () -> {
+    createProducto: (text, text, nat8, float32, float32) -> (variant {Ok:record {costo:float32; stock:nat8; precioVenta:float32; nameProducto:text; ganancia:float32}; Err:variant {idExist:text; doesNotVentas:text; nameProductoExist:text; invalidValue:text; errortxt:text; idDoesNotExist:text}});
+    deleteProduct: (text) -> (variant {Ok:record {costo:float32; stock:nat8; precioVenta:float32; nameProducto:text; ganancia:float32}; Err:variant {idExist:text; doesNotVentas:text; nameProductoExist:text; invalidValue:text; errortxt:text; idDoesNotExist:text}});
+    getInventario: () -> (vec record {text; record {costo:float32; stock:nat8; precioVenta:float32; nameProducto:text; ganancia:float32}}) query;
+    getVentas: () -> (vec record {neto:float32; ganancia:float32}) query;
+    updateCosto: (text, float32) -> (variant {Ok:record {costo:float32; stock:nat8; precioVenta:float32; nameProducto:text; ganancia:float32}; Err:variant {idExist:text; doesNotVentas:text; nameProductoExist:text; invalidValue:text; errortxt:text; idDoesNotExist:text}});
+    updateGanancia: (text, float32) -> (variant {Ok:record {costo:float32; stock:nat8; precioVenta:float32; nameProducto:text; ganancia:float32}; Err:variant {idExist:text; doesNotVentas:text; nameProductoExist:text; invalidValue:text; errortxt:text; idDoesNotExist:text}});
+    updateNameProduct: (text, text) -> (variant {Ok:record {costo:float32; stock:nat8; precioVenta:float32; nameProducto:text; ganancia:float32}; Err:variant {idExist:text; doesNotVentas:text; nameProductoExist:text; invalidValue:text; errortxt:text; idDoesNotExist:text}});
+    updateStock: (text, nat8) -> (variant {Ok:record {costo:float32; stock:nat8; precioVenta:float32; nameProducto:text; ganancia:float32}; Err:variant {idExist:text; doesNotVentas:text; nameProductoExist:text; invalidValue:text; errortxt:text; idDoesNotExist:text}});
+    updateVentas: (text, nat8) -> (variant {Ok:record {costo:float32; stock:nat8; precioVenta:float32; nameProducto:text; ganancia:float32}; Err:variant {idExist:text; doesNotVentas:text; nameProductoExist:text; invalidValue:text; errortxt:text; idDoesNotExist:text}});
+}
