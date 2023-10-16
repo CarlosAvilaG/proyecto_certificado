@@ -73,7 +73,7 @@ export default Canister({
 
       //Inserta el producto a inventario
       inventario.insert(id, producto)       
-      // }
+
       return Ok(producto)
     }
 
