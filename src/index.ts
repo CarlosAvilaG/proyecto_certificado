@@ -54,7 +54,7 @@ export default Canister({
 
       //Validar si inventario esta vacio
       // if (inventario.isEmpty()) {
-      //   inventario.insert(id, producto)
+      //   inventario.insert(id, producnnnto)
       // }
       // else{
       //Verifica si ya existe un producto en el inventario con la misma id
