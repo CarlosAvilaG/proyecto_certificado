@@ -96,6 +96,13 @@ export default Canister({
       });
     }
 
+    // Valida que el nombre no sea una cadena vacia
+    if (nameProducto === "") {
+      return Err({
+          errortxt: "Ingrese un nombre para el producto"
+      });
+    }
+
     const producto = productoOpt.Some
 
     const newProducto: typeof Producto = {
@@ -142,6 +149,13 @@ export default Canister({
       });
     }
 
+    // Valida que el costo no sea un dato vacio o negativo
+    if (!costo || costo <= 0) {
+      return Err({
+          errortxt: "Ingrese un valor valido para el costo"
+      });
+    }
+
     const producto = productoOpt.Some
 
     // Calcula un nuevo precio de venta en base al valor de costo nuevo
@@ -166,6 +180,13 @@ export default Canister({
     if ('None' in productoOpt) {
       return Err({
           idDoesNotExist: id
+      });
+    }
+
+    // Valida que la ganancia no sea un dato vacio o negatico
+    if (!ganancia || ganancia <= 0) {
+      return Err({
+          errortxt: "Ingrese un valor valido para el porcentaje"
       });
     }
 
